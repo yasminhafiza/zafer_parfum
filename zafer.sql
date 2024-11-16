@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 28, 2024 at 02:14 PM
+-- Generation Time: Nov 16, 2024 at 03:06 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -176,7 +176,9 @@ INSERT INTO `pembelian` (`id_pembelian`, `id_pelanggan`, `tanggal_pembelian`, `t
 (42, 7, '2024-07-12', 1015000, 'Jl. Ir. H. Juanda No. 25,\r\nKelurahan Gambir,\r\nKecamatan Gambir,', 2000, 'Kepulauan Riau', 'Natuna', 'Kabupaten', '29711', 'gosend', 'flash', 25000, '1 hari', 'pending', NULL),
 (43, 1, '2024-07-12', 134000, 'visar', 200, 'DKI Jakarta', 'Jakarta Barat', 'Kota', '11220', 'pandu logistics', 'sameday', 35000, 'sama hari', 'pending', NULL),
 (44, 1, '2024-07-13', 106000, 'Serpong Garden', 200, 'Banten', 'Tangerang', 'Kota', '15111', 'jne', 'oke', 7000, '4-7 hari', 'Produk sedang diproses', '4567890'),
-(45, 8, '2024-07-26', 106000, 'Jalan: Jl. Merdeka No. 123 Kelurahan: Kebon Jeruk Kecamatan: Kebayoran Lama', 200, 'DKI Jakarta', 'Jakarta Selatan', 'Kota', '12230', 'jne', 'oke', 7000, '4-7 hari', 'pending', NULL);
+(45, 8, '2024-07-26', 106000, 'Jalan: Jl. Merdeka No. 123 Kelurahan: Kebon Jeruk Kecamatan: Kebayoran Lama', 200, 'DKI Jakarta', 'Jakarta Selatan', 'Kota', '12230', 'jne', 'oke', 7000, '4-7 hari', 'pending', NULL),
+(46, 1, '2024-11-11', 594000, '', 1200, '', '', '', '', '', '', 0, '', 'pending', NULL),
+(47, 1, '2024-11-11', 99000, '', 200, '', '', '', '', '', '', 0, '', 'pending', NULL);
 
 -- --------------------------------------------------------
 
@@ -235,7 +237,9 @@ INSERT INTO `pembelian_produk` (`id_pembelian_produk`, `id_pembelian`, `id_produ
 (62, 42, 12, 10, 'VIP Men ( 50 ML ) ', 99000, 200, 2000, 990000),
 (63, 43, 5, 1, 'Bomsell ( 50 ML )', 99000, 200, 200, 99000),
 (64, 44, 10, 1, 'Ver Eros ( 50 ML )', 99000, 200, 200, 99000),
-(65, 45, 7, 1, 'Desire Blue', 99000, 200, 200, 99000);
+(65, 45, 7, 1, 'Desire Blue', 99000, 200, 200, 99000),
+(66, 46, 5, 6, 'Bomsell ( 50 ML )', 99000, 200, 1200, 594000),
+(67, 47, 6, 1, 'Baccarat ( 50 ML )', 99000, 200, 200, 99000);
 
 -- --------------------------------------------------------
 
@@ -260,8 +264,8 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`id_produk`, `id_kategori`, `nama_produk`, `harga_produk`, `berat_produk`, `foto_produk`, `deskripsi_produk`, `stok_produk`, `jumlah_terjual`) VALUES
-(5, 1, 'Bomsell ( 50 ML )', 99000, 200, 'Bomsell2.jpeg', '', 39, 14),
-(6, 3, 'Baccarat ( 50 ML )', 99000, 200, 'baccarat 540.jpeg', '', 30, 5),
+(5, 1, 'Bomsell ( 50 ML )', 99000, 200, 'Bomsell2.jpeg', '', 33, 20),
+(6, 3, 'Baccarat ( 50 ML )', 99000, 200, 'baccarat 540.jpeg', '', 29, 6),
 (7, 2, 'Desire Blue', 99000, 200, 'desireblue.jpeg', 'Stunning works of art, creating an alluring aura of elegance and undeniable luxury. With every spray, this fragrance invites you to enter a world full of unforgettable beauty and timeless elegance.  Top Notes: Saffron, Jasmine Middle Notes: Amberwood, Ambergriss Base Notes: Fir resin, Cedar  HOW-TO-USE 1. Semprotkan parfum dari jarak sekitar 15-20 cm. 2. Pastikan menekan kepala spray dengan penuh.Penekanan tidak sempurna akan menyebabkan rembesan pada botol parfum. 3. Oleskan lotion/balm sebelum menyemprotkan parfum untuk hasil yang lebih tahan lama dan mengindari iritasi pada area sensitif.', 29, 8),
 (9, 3, 'Black Opivm ( 50 ML )', 99000, 200, 'Black Opivm2.jpeg', 'Stunning works of art, creating an alluring aura of elegance and undeniable luxury. With every spray, this fragrance invites you to enter a world full of unforgettable beauty and timeless elegance.  Top Notes: Saffron, Jasmine Middle Notes: Amberwood, Ambergriss Base Notes: Fir resin, Cedar  HOW-TO-USE 1. Semprotkan parfum dari jarak sekitar 15-20 cm. 2. Pastikan menekan kepala spray dengan penuh.Penekanan tidak sempurna akan menyebabkan rembesan pada botol parfum. 3. Oleskan lotion/balm sebelum menyemprotkan parfum untuk hasil yang lebih tahan lama dan mengindari iritasi pada area sensitif.', 30, 3),
 (10, 2, 'Ver Eros ( 50 ML )', 99000, 200, 'Ver Eros2.jpeg', 'From the first time you smell the fragrance, Ver Eros immediately gives a strong and fresh impression. This aroma is like a burst of energy that uplifts the spirit and radiates vitality. Perfect for men who want to show their dynamic and energetic side.   Top Notes:Apple, Lemon, Mint Middle Notes: Tonka Bean, Ambroxan, Geranium Base Notes: vanilla, cedarwood, vetiver, oakmoss  HOW-TO-USE 1. Semprotkan parfum dari jarak sekitar 15-20 cm. 2. Pastikan menekan kepala spray dengan penuh.Penekanan tidak sempurna akan menyebabkan rembesan pada botol parfum. 3. Oleskan lotion/balm sebelum menyemprotkan parfum untuk hasil yang lebih tahan lama dan mengindari iritasi pada area sensitif.', 39, 4),
@@ -426,13 +430,13 @@ ALTER TABLE `pembayaran`
 -- AUTO_INCREMENT for table `pembelian`
 --
 ALTER TABLE `pembelian`
-  MODIFY `id_pembelian` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id_pembelian` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT for table `pembelian_produk`
 --
 ALTER TABLE `pembelian_produk`
-  MODIFY `id_pembelian_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `id_pembelian_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT for table `produk`
